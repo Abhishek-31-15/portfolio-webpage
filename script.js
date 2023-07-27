@@ -20,11 +20,12 @@ for (var i = 0; i < navMenuAnchorTags.length; i++) {
 
 function scrollVertically(targetSection) {
     var targetSectionCoordinates = targetSection.getBoundingClientRect();
-     if (targetSectionCoordinates.top <= 0) {
+    if (targetSectionCoordinates.top <= 0) {
         clearInterval(interval);
         return;
     }
     window.scrollBy(0, 50);
+}
 
 const proficiences =[50, 85, 80, 60, 50, 50, 50, 60 ];
 function fillskillBars(){
@@ -49,3 +50,4 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   });
+  
