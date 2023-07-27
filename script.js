@@ -26,35 +26,26 @@ function scrollVertically(targetSection) {
     }
     window.scrollBy(0, 50);
 
-var progressbars= document.querySelectorAll(".skill-progress > div");
+const proficiences =[50, 85, 80, 60, 50, 50, 50, 60 ];
+function fillskillBars(){
+    const skillBars= document.queryselectorAll('.skill-fill');
+skillBars.forEach((bar,index)=>{
+    const proficiency = proficiences[index];
+    bar.style.width = '${proficiency}%';
+});}
 
-function initialiseBar(bar){ 
-bar.setAttribute("data-visited",false);
-bar.style.width = 0 + '%';
-}
+window.addEventListener('load',fillskillBars);
 
-for (var bar of progressbars ){
-    initialiseBar(bar);
-}
 
-function fillBar(bar) {
+// code for Scroll to the top of the page with smooth behavior
+document.addEventListener("DOMContentLoaded", function () {
+    const scrollBtn = document.querySelector(".scroll-to-top-btn");
 
-    var currentWidth = 0;
-    var targetWidth =  bar.getAttribute("data-bar-width");
-    var interval = setInterval(function() {
-        if (currentWidth >= targetWidth) {
-            clearInterval(interval);
-            return;
-        }
-        currentWidth++;
-        bar.style.width = currentWidth +'%';
-    },5);
-}
-
-progressbars.forEach(fillBar);   
-    if (targetSectionCoordinates.top <= 0) {
-        clearInterval(interval);
-        return;
-    }
-    window.scrollBy(0, 50);
-}
+  // Scroll to the top of the page with smooth behavior
+    scrollBtn.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    });
+  });
