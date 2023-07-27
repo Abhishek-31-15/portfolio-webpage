@@ -217,46 +217,7 @@ section:nth-child(2n + 1) {
     font-weight: 600;
 }
 
-/*Skills Section*/
-
-.skills-display {
-    width: 75%;
-    padding: 10px;
-    margin-bottom: 30px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-.skill-text{
-    font-size: 1.8rem;
-    font-weight: 100;
-}
-
-.skill-progress {
-    width: 11rem;
-    height: 2.2rem;
-    background-color: lightgrey;
-    border-radius: 1rem;
-    box-shadow: 1px 1px 2px 1px #b9b9b9 inset;
-    margin: 25px;
-    overflow: hidden;
-}
-
-.skill-progress > div {
-    border-radius: 20px 0px 0px 20px;
-    box-shadow: 1px 1px 5px 2px #989882;
-}
-
-.skill-name span {
-    color: white;
-    font-size: 1rem;
-    margin-left: 10px;
-    vertical-align: middle;
-}
-
-
-
-/* Work Experience */
+/* Education */
 
 .timeline {
     position: relative;
@@ -356,6 +317,60 @@ section:nth-child(2n + 1) {
     color: rgb(56, 54, 54);
     line-height: 20px; 
 }
+
+/*Skills Section*/
+
+.skills-display {
+    width: 75%;
+    padding: 10px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.skill-text {
+    font-size: 1.8rem;
+    font-weight: 100;
+}
+
+.skill-progress {
+    width: 11rem;
+    height: 2.2rem;
+    background-color: lightgrey;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 2px 1px #b9b9b9 inset;
+    margin: 25px;
+    overflow: hidden;
+}
+
+.skill-progress{
+    background-color: #f0f0f0;
+    height: 30px;
+    width: 20%;
+    border-radius: 20px;
+    overflow:hidden;
+}
+
+.skill-progress>div {
+    border-radius: 20px 0px 0px 20px;
+    box-shadow: 1px 1px 5px 2px #989882;
+}
+
+.skill-name span {
+    color: white;
+    font-size: 1rem;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+.skill-fill{
+    height: 100px;
+    border-radius: 20px;
+    background-color: #4caf50;
+    transition: width 1s ease;
+}
+
 
 
 /* Contact Form */
@@ -473,6 +488,31 @@ button:focus {
     outline: none;
 }
 
+
+.scroll-to-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height:50px;
+    color: rgb(56, 56, 40);  
+    font-size: 30px;
+    font-weight: 100;
+    line-height: 44px;
+    text-align: center;
+    border-radius:20%;
+    cursor:pointer;
+    opacity: 0.7; 
+    transition: opacity 0.3s ease;
+  }
+
+.scroll-to-top-btn:hover{
+    background-color:  #da1a1a;
+    color: rgb(219, 219, 215);
+    opacity: 1;
+
+}  
+
 /* Common Text Align Classes */
 
 .text-right{
@@ -548,6 +588,11 @@ button:focus {
     width: 80%;
 }
 
+.sixty-percent {
+    height: inherit;
+    width: 60%;
+}
+
 .fifty-percent {
     height: inherit;
     width: 50%;
@@ -569,6 +614,10 @@ button:focus {
     .nav-menu {
         display: none;
     } 
+
+    .dropdown-menu {
+        background-color: transparent;
+    }
 }
 
 
